@@ -11,18 +11,18 @@ eureka:
 #
 spring:
   datasource:
-    url: jdbc:sybase:Tds:localhost:2638?ServiceName=faccsystem
+    url: jdbc:sybase:Tds:localhost:2638?ServiceName=server
     username: n.tello
     password: myfriends
     driverClassName: com.sybase.jdbc4.jdbc.SybDriver
     type: com.zaxxer.hikari.HikariDataSource
   jpa:
     properties:
-      hibernate:
-        default_schema: SCHEMA
-        connection:
+      default_schema: SCHEMA
+      connection:
           useUnicode: true
           characterEncoding: UTF-8
-    hibernate: ddl-auto=none
+    hibernate:
+      ddl-auto: none
     databasePlatform: org.hibernate.dialect.SybaseASE157Dialect
     show-sql: true
