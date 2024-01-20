@@ -11,7 +11,7 @@ eureka:
 #
 spring:
   application:
-    name: laundry-integration    
+    name: laundry-integration-nigisu
   datasource:
     url: jdbc:sybase:Tds:localhost:2638?ServiceName=faccsystem
     username: n.tello
