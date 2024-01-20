@@ -1,1 +1,23 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:9004}
   
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA.SERVER.HOSTNAME:http://localhost:8761/eureka}
+
+spring:
+  datasource:
+    url: jdbc:sybase:Tds:localhost:2638?ServiceName=faccsystem
+    username: n.tello
+    password: myfriends
+    driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.SybaseAnywhereDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SybaseDialect
