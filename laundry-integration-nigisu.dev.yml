@@ -11,7 +11,7 @@ eureka:
 #
 spring:
   datasource:
-    url: jdbc:sybase:Tds:localhost:2638/faccsystem
+    url: jdbc:sybase:Tds:localhost:2638?ServiceName=faccsystem
     username: n.tello
     password: myfriends
     driverClassName: com.sybase.jdbc4.jdbc.SybDriver
