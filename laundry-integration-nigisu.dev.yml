@@ -7,8 +7,6 @@ eureka:
     service-url:
       defaultZone: ${EUREKA.SERVER.HOSTNAME:http://localhost:8761/eureka}
       
-# conexion a la bdd Spring Datasource Configuration jconn4
-#
 spring:
   application:
     name: laundry-integration-nigisu
