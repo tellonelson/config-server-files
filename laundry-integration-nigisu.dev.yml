@@ -10,19 +10,18 @@ eureka:
 # conexion a la bdd Spring Datasource Configuration jconn4
 #
 spring:
+  application:
+    name: laundry-integration    
   datasource:
-    url: jdbc:sybase:Tds:localhost:2638?ServiceName=server
+    url: jdbc:sybase:Tds:localhost:2638?ServiceName=faccsystem
     username: n.tello
     password: myfriends
-    driverClassName: com.sybase.jdbc4.jdbc.SybDriver
+    driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
     type: com.zaxxer.hikari.HikariDataSource
   jpa:
-    properties:
-      default_schema: SCHEMA
-      connection:
-          useUnicode: true
-          characterEncoding: UTF-8
     hibernate:
-      ddl-auto: none
-    databasePlatform: org.hibernate.dialect.SybaseASE157Dialect
-    show-sql: true
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.SybaseAnywhereDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SybaseDialect
