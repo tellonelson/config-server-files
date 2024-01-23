@@ -2,12 +2,18 @@ server:
   port: ${CUSTOM.SERVER.PORT:9004}
   
 eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 30
   client:
     register-with-eureka: true
     service-url:
-      defaultZone: ${EUREKA.SERVER.HOSTNAME:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA.SERVER.HOSTNAME:http://localhost:8761/eureka
+    fetchRegistry: true
 
 spring:
+  application:
+    name: laundry-integration-nigisu
   datasource:
     url: jdbc:sybase:Tds:localhost:2638?ServiceName=faccsystem
     username: n.tello
