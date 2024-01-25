@@ -16,3 +16,8 @@ spring:
     gateway:
       routes:
         - id: laundry-integration-nigisus
+          uri: laundry-integration-nigisus
+          predicates:
+            - Path=/api/laundry-integration-nigisu/**
+          filters:
+            - StripPrefix=2
