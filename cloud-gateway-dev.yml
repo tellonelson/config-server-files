@@ -16,7 +16,7 @@ spring:
     gateway:
       routes:
         - id: laundry-integration-nigisu
-          uri: laundry-integration-nigisu # este es el nombre de la aplicacion
+          uri: lb://laundry-integration-nigisu # este es el nombre de la aplicacion
           predicates:
             - Path=/api/laundry-integration-nigisu/**
           filters:
