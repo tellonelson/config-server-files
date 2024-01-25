@@ -14,8 +14,8 @@ eureka:
 spring:
   datasource:
     url: jdbc:sybase:Tds:localhost:2638?ServiceName=faccsystem
-    username: n.tello
-    password: myfriends
+    username: nigisu
+    password: sistem01
     driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
     type: com.zaxxer.hikari.HikariDataSource
   jpa:
