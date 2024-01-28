@@ -1,0 +1,4 @@
+# compilar archivo Dockerfile, despues de -t (tag de la imagen) se pone un nombre y luego del nombre : y ponemos
+# la version, no olvidar el signo . al final
+
+docker build -t discovery-server:0.0.1 .
