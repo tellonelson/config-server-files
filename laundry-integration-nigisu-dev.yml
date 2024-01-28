@@ -13,7 +13,7 @@ eureka:
 
 spring:
   datasource:
-    url: ${SERVER.DATABASE.NG:jdbc:sybase:Tds:localhost:2638?ServiceName=faccsystem}
+    url: ${SERVER.DATABASE.NG:jdbc:sybase:Tds:25.177.226.128:2638?ServiceName=faccsystem}
     username: dba
     password: +formula*1234+
     driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
