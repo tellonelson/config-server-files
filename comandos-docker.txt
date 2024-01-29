@@ -14,9 +14,12 @@ docker login
 #
 docker tag discovery-server-discovery-server tellonelson/soluya-project
 
+docker tag discovery-server-config-server tellonelson/config-server
+
 # 2 pusheamos lo asociado
 #
 docker push tellonelson/soluya-project
+docker push tellonelson/config-server
 
 # estos son los tag de servidores
 #
