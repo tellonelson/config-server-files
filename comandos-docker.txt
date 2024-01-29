@@ -2,3 +2,29 @@
 # la version, no olvidar el signo . al final
 
 docker build -t discovery-server:0.0.1 .
+
+# asociar una imagen existente en el docker desktop a mi docker hub
+# guarda una relacion con los comandos git
+#
+# 0 hacemos login al repositorio
+#
+docker login
+
+# 1 asociamos el tag
+#
+docker tag discovery-server-discovery-server tellonelson/soluya-project
+
+# 2 pusheamos lo asociado
+#
+docker push tellonelson/soluya-project
+
+# estos son los tag de servidores
+#
+discovery-server-discovery-server
+discovery-server-config-server
+discovery-server-cloud-gateway
+
+# estos son los tag de microservicios
+#
+discovery-server-laundry-integration-nigisu-service
+discovery-server-laundry-service
