@@ -1,0 +1,16 @@
+FROM maven:3.5-jdk-8-alpine as builder
+
+# copy local code to the container image
+WORKDIR /app
+COPY pom.xml
+COPY src ./src
+
+RUN mvn package -DskipTest
+
+FROM adoptopenjdk/openjdk8:jdk8u202-b08-alpine-slim
+
+# copy the jar to the production image from the buider stage, file.jar se debe cambiar
+COPY --from=builder /app/target/*.jar /file.jar
+
+# run de web service or api on container startup, file.jar se debe cambiar
+CMD ["java", "-jar", "/file.jar"]

@@ -16,10 +16,14 @@ docker tag discovery-server-discovery-server tellonelson/soluya-project
 
 docker tag discovery-server-config-server tellonelson/config-server
 
+docker tag discovery-server-cloud-gateway tellonelson/cloud-gateway
+
 # 2 pusheamos lo asociado
 #
 docker push tellonelson/soluya-project
 docker push tellonelson/config-server
+docker push tellonelson/cloud-gateway
+
 
 # estos son los tag de servidores
 #
@@ -31,3 +35,9 @@ discovery-server-cloud-gateway
 #
 discovery-server-laundry-integration-nigisu-service
 discovery-server-laundry-service
+
+EUREKA.SERVER.HOSTNAME https://discovery-server-6myasrw2va-uc.a.run.app/eureka
+
+CONFIG.SERVER.HOSTNAME https://config-server-6myasrw2va-uc.a.run.app
+
+SERVER.DATABASE.NG jdbc:sybase:Tds:25.177.226.128:2638?ServiceName=faccsystem
