@@ -18,7 +18,7 @@ spring:
         - id: laundry-integration-nigisu # este es un nombre cualquiera
           uri: lb://laundry-integration-nigisu # este es el nombre de la aplicacion, se conoce como service id
           predicates:
-            - Path=/api/laundry-integration-nigisu/**
+            - Path=/api/laundryintegrationnigisu/**
           filters:
             - StripPrefix=2
         - id: laundry # este es un nombre cualquiera
