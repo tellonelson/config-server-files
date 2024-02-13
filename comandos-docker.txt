@@ -61,3 +61,6 @@ sudo docker pull tellonelson/laundry-service:latest
 sudo docker pull tellonelson/laundry-integration-nigisu-service:latest
 
 2. Realizar docker compose up -d
+
+
+curl "http://localhost:9090/api/integration/receptions/findAll"
