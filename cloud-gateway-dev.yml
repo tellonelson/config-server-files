@@ -16,7 +16,7 @@ spring:
     gateway:
       routes:
         - id: laundry-integration-nigisu # este es un nombre cualquiera
-          uri: lb://laundry-integration-nigisu # este es el nombre de la aplicacion, se conoce como service id
+          uri: lb://integration # este es el nombre de la aplicacion, se conoce como service id
           predicates:
             - Path=/api/integration/**
           filters:
