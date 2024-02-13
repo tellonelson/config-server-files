@@ -20,12 +20,15 @@ docker tag discovery-server-cloud-gateway tellonelson/cloud-gateway
 
 docker tag discovery-server-laundry-service tellonelson/laundry-service
 
+docker tag discovery-server-laundry-integration-nigisu-service tellonelson/laundry-integration-nigisu-service
+
 # 2 pusheamos lo asociado
 #
 docker push tellonelson/discovery-server
 docker push tellonelson/config-server
 docker push tellonelson/cloud-gateway
 docker push tellonelson/laundry-service
+docker push tellonelson/laundry-integration-nigisu-service
 
 
 # estos son los tag de servidores
@@ -46,17 +49,15 @@ CONFIG.SERVER.HOSTNAME https://config-server-6myasrw2va-uc.a.run.app
 SERVER.DATABASE.NG jdbc:sybase:Tds:25.177.226.128:2638?ServiceName=faccsystem
 
 
-# pasar parametros
-#
-docker run 95cc02571b9f -e EUREKA.SERVER.HOSTNAME="http://discovery-server:8761/eureka" CONFIG.SERVER.HOSTNAME="http://config-server:9000"
-
-
-
 # MONTAR SISTEMA LAUNDRY
 #
 #
 1. Bajar las imagenes al local con pull
 
+sudo docker pull tellonelson/discovery-server:latest
+sudo docker pull tellonelson/config-server:latest
 sudo docker pull tellonelson/cloud-gateway:latest
+sudo docker pull tellonelson/laundry-service:latest
+sudo docker pull tellonelson/laundry-integration-nigisu-service:latest
 
 2. Realizar docker compose up -d
