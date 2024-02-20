@@ -14,4 +14,4 @@ sudo gdebi logmein-hamachi_2.1.0.203-1_amd64.deb
 
 sudo hamachi login
 
-sudo hamachi join 399-367-667 te pide password el mio ha sido sistem01
+sudo hamachi join 399-367-667 -- 399-367-667 es el numero de red, me pide password en este caso es sistem01

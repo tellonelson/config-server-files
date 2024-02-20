@@ -15,16 +15,22 @@ eureka:
     refresh:
       enable: true
 
-### Mongo database configuration
+### Audit database configuration
 #
 spring:
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: mitocode
-      uri: mongodb://mitocode:mitocode@localhost:27017
-      authentication-database: admin
+  datasource:
+    url: ${SERVER.DATABASE.PG.AUDIT:jdbc:postgresql://localhost:5432/audit}
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate:
+      '[format_sql]': true
 
 # Kafka Configuration
 #
