@@ -29,3 +29,11 @@ spring:
   graphql:
     graphiql:
       enabled: true
+      
+# Kafka Configuration
+#
+kafka:
+  soluya:
+    topic: soluya
+    server: 127.0.0.1
+    port: 9092
