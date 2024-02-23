@@ -62,5 +62,7 @@ sudo docker pull tellonelson/laundry-integration-nigisu-service:latest
 
 2. Realizar docker compose up -d
 
+3. Crear la base tintulav desde Dbeaver
+
 
 curl "http://localhost:9090/api/integration/receptions/findAll"
